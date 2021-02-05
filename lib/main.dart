@@ -64,6 +64,8 @@ class _SIFormState extends State<SIForm> {
                       keyboardType: TextInputType.number,
                       style: textStyle,
                       controller: principalController,
+                      inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly],
                       validator: (String value) {
                         if (value.isEmpty) {
                           return 'Please enter principal amount';
@@ -87,6 +89,8 @@ class _SIFormState extends State<SIForm> {
                       keyboardType: TextInputType.number,
                       style: textStyle,
                       controller: roiController,
+                      inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly],
                       validator: (String value) {
                         if (value.isEmpty) {
                           return 'Please enter rate of interest';
@@ -113,6 +117,8 @@ class _SIFormState extends State<SIForm> {
                           keyboardType: TextInputType.number,
                           style: textStyle,
                           controller: termController,
+                              inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly],
                           validator: (String value) {
                             if (value.isEmpty) {
                               return 'Please enter time';
